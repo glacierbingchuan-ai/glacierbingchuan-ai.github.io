@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="LJT 与 LLX 的恋爱回忆网页" />
+  <title>LJT ❤ LLX — 我们的故事</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Noto+Serif+SC:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="background-layer" aria-hidden="true">
+    <video class="bg-video" id="bgVideo" autoplay loop playsinline preload="auto"></video>
+    <div class="bg-overlay"></div>
+    <canvas class="particle-canvas" id="particleCanvas"></canvas>
+  </div>
+
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <header class="hero">
+    <div class="hero-content">
+      <h1 class="hero-title">LJT <span class="heart">❤</span> LLX</h1>
+      <p class="hero-subtitle" id="heroSubtitle"></p>
+    </div>
+    <button class="scroll-hint" id="scrollHint" aria-label="向下滚动">
+      <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 5v14M5 12l7 7 7-7" />
+      </svg>
+    </button>
+  </header>
+
+  <main>
+    <section class="section featured-section" id="featured">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">Cherished Moments</span>
+          <h2 class="section-title">精选瞬间</h2>
+          <p class="section-desc">这些画面，是我们爱情里最温柔的注脚。</p>
+        </div>
+        <div class="featured-grid" id="featuredGrid"></div>
+      </div>
+    </section>
+
+    <section class="section gallery-section" id="gallery">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">Our Memories</span>
+          <h2 class="section-title">我们的回忆</h2>
+          <p class="section-desc">每一张照片，都是时间写下的情书。</p>
+        </div>
+        <div class="gallery-grid" id="galleryGrid"></div>
+      </div>
+    </section>
+  </main>
+
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lightbox-close" id="lightboxClose" aria-label="关闭">×</button>
+    <img id="lightboxImg" src="" alt="">
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <p class="footer-text">故事还在继续……</p>
+      <div class="heartbeat" aria-hidden="true">❤</div>
+      <p class="footer-sign">LJT ❤ LLX</p>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="回到顶部">
+    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 19V5M5 12l7-7 7 7" />
+    </svg>
+  </button>
+
+  <script src="app.js"></script>
+</body>
+</html>
